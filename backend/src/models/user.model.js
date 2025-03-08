@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema(
     {
-        emal:{
+        email:{
             type:String,
             required: true,
             unique: true
@@ -11,7 +11,7 @@ const userSchema = new mongoose.Schema(
             type: String,
             required: true,
         },
-        pasword:{
+        password:{
             type: String,
             required: true,
             minlength: 6
