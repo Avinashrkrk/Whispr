@@ -42,60 +42,7 @@ export const signup = asyncHandler(async (req, res) => {
   
 })
 
-// export const signup = async (req, res) => {
-//   try {
-//     const { fullName, email, password } = req.body;
-    
-//     console.log("Signup Request Body:", req.body); // Debugging log
 
-
-
-//     if (!fullName || !email || !password) {
-//       return res.status(400).json({ message: "All fields are required" });
-//     }
-
-//     if (password.length < 6) {
-//       return res.status(400).json({ message: "Password must be at least 6 characters" });
-//     }
-
-//     const trimmedEmail = email.trim().toLowerCase(); // Ensure consistency
-
-//     if (!trimmedEmail) {
-//       return res.status(400).json({ message: "Email is required" });
-//     }
-
-//     const user = await User.findOne({ email: trimmedEmail });
-
-//     if (user) return res.status(400).json({ message: "Email already exists" });
-
-//     const salt = await bcrypt.genSalt(10);
-//     const hashedPassword = await bcrypt.hash(password, salt);
-
-//     const newUser = new User({
-//       fullName,
-//       email: trimmedEmail,
-//       password: hashedPassword,
-//     });
-
-//     if (newUser) {
-//       // generate jwt token here
-//       generateToken(newUser._id, res);
-//       await newUser.save();
-
-//       res.status(201).json({
-//         _id: newUser._id,
-//         fullName: newUser.fullName,
-//         email: newUser.email,
-//         profilePic: newUser.profilePic,
-//       });
-//     } else {
-//       res.status(400).json({ message: "Invalid user data" });
-//     }
-//   } catch (error) {
-//     console.error("Error in signup controller", error.message);
-//     res.status(500).json({ message: "Internal Server Error" });
-//   }
-// };
 
 
 export const login = asyncHandler(async(req, res) => {
