@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import avatar1 from '../api/placeholder/img-2.webp'
 import avatar2 from '../api/placeholder/img-3.png'
 import avatar3 from '../api/placeholder/img-3.jpeg'
+import {toast} from "react-hot-toast"
 
 function SignUpPage(){
     const [showPassword, setShowPassword] = useState(false)
@@ -17,22 +18,22 @@ function SignUpPage(){
     const { signup, isSigningUp } = useAuthStore();
 
     const validateForm = () => {
-        // if (!formData.fullName.trim()) return toast.error("Full name is required");
-        // if (!formData.email.trim()) return toast.error("Email is required");
-        // if (!/\S+@\S+\.\S+/.test(formData.email)) return toast.error("Invalid email format");
-        // if (!formData.password) return toast.error("Password is required");
-        // if (formData.password.length < 6) return toast.error("Password must be at least 6 characters");
+        if (!formData.fullName.trim()) return toast.error("Full name is required");
+        if (!formData.email.trim()) return toast.error("Email is required");
+        if (!/\S+@\S+\.\S+/.test(formData.email)) return toast.error("Invalid email format");
+        if (!formData.password) return toast.error("Password is required");
+        if (formData.password.length < 6) return toast.error("Password must be at least 6 characters");
     
-        // return true;
+        return true;
       }
     
-      const handleSubmit = (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
     
-        // const success = validateForm();
+        const success = validateForm();
     
-        // if (success === true) signup(formData);
-      }
+        if (success === true) signup(formData);
+    }
 
     return(
         <div className="min-h-screen grid lg:grid-cols-2">
@@ -167,10 +168,10 @@ function SignUpPage(){
         </button>
         <button className="btn btn-outline flex items-center justify-center gap-2">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" className="size-5">
-            <path fill="currentColor" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
-            <path fill="currentColor" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
-            <path fill="currentColor" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
-            <path fill="currentColor" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+            <path fill1="currentColor" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+            <path fill1="currentColor" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+            <path fill1="currentColor" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+            <path fill1="currentColor" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
           </svg>
           Google
         </button>
