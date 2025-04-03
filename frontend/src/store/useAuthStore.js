@@ -28,7 +28,6 @@ export const useAuthStore = create((set) => ({
           set({ authUser: res.data });
           toast.success("Account created successfully");
           // get().connectSocket();
-          return true;
         } catch (error) {
           toast.error(error.response.data.message);
         } finally {
