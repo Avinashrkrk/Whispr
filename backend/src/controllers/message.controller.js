@@ -4,6 +4,7 @@ import {ApiResponse} from "../utils/ApiResponse.js"
 import { generateToken } from "../lib/utils.js"
 import User from "../models/user.model.js"
 import Message from "../models/message.model.js"
+import cloudinary from "../lib/cloudinary.js"
 
 export const getUsersForSidebar = async (req, res) => {
     try {
@@ -19,7 +20,7 @@ export const getUsersForSidebar = async (req, res) => {
     }
 };
 
-export const getMessage = asyncHandler(async(req, res) => {
+export const getMessage = async(req, res) => {
     try {
         const { id : userToChat } = req.params
         const myId = req.user._id
@@ -36,7 +37,7 @@ export const getMessage = asyncHandler(async(req, res) => {
         console.error("Error in getMessage:", error.message);
         res.status(500).json({ error: "Internal server error" });
     }
-})
+}
 
 export const sendMessage = asyncHandler(async(req, res) => {
     try {
