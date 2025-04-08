@@ -5,7 +5,7 @@ import { generateToken } from "../lib/utils.js"
 import User from "../models/user.model.js"
 import Message from "../models/message.model.js"
 
-export const getUsersForSidebar = asyncHandler(async (req, res) => {
+export const getUsersForSidebar = async (req, res) => {
     try {
         const loggedInUserId = req.user._id;  
 
@@ -17,7 +17,7 @@ export const getUsersForSidebar = asyncHandler(async (req, res) => {
         console.error("Error in getUsersForSidebar:", error.message);
         res.status(500).json({ error: "Internal server error" });
     }
-});
+};
 
 export const getMessage = asyncHandler(async(req, res) => {
     try {
