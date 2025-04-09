@@ -8,7 +8,11 @@ const NoChatSelected = () => {
         <div className="relative mb-8">
           <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full blur-lg opacity-40"></div>
           <div className="relative w-24 h-24 rounded-full bg-[#212630] flex items-center justify-center">
-            <MessageSquare className="w-12 h-12 text-indigo-400" />
+            <img 
+              src="/whispr-logo.svg" 
+              alt="Whispr Logo" 
+              className="w-30 h-30 text-indigo-400"
+            />
           </div>
         </div>
         

@@ -128,10 +128,15 @@ const ProfilePage = () => {
           <div className="absolute inset-0 bg-grid-pattern opacity-20"></div>
           <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-8">
             <div className="bg-white/10 rounded-full p-4 mb-6">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              {/* <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="4" y="4" width="16" height="16" rx="3" stroke="currentColor" strokeWidth="2" />
                 <path d="M9 12H15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-              </svg>
+              </svg> */}
+              <img 
+                src="/whispr-logo.svg" 
+                alt="Whispr Logo" 
+                className="w-20 h-20 text-indigo-400"
+              />
             </div>
             <h2 className="text-3xl font-bold mb-4 text-center">Welcome to Whispr</h2>
             <p className="text-lg text-center mb-8">

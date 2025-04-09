@@ -14,15 +14,19 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-full">
           {/* Logo and Brand */}
           <div className="flex items-center gap-8">
-            <Link to="/" className="flex items-center gap-2.5 hover:opacity-90 transition-all group">
-              <div className="size-10 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-all duration-300">
-                <MessageSquare className="w-5 h-5 text-primary" />
-              </div>
-              <div className="flex flex-col">
-                <h1 className="text-lg font-bold leading-none">Whispr</h1>
-                <span className="text-xs text-base-content/60">Stay connected</span>
-              </div>
-            </Link>
+          <Link to="/" className="flex items-center gap-2.5 hover:opacity-90 transition-all group">
+            <div className="size-25 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-all duration-300">
+              <img 
+                src="/whispr-logo.svg" 
+                alt="Whispr Logo" 
+                className="w-10 h-10 text-primary"
+              />
+            </div>
+            <div className="flex flex-col">
+              <h1 className="text-lg font-bold leading-none">Whispr</h1>
+              <span className="text-xs text-base-content/60">Stay connected</span>
+            </div>
+          </Link>
             
             {/* Optional: Desktop Navigation Links */}
             {/* <nav className="hidden md:flex items-center gap-4">

@@ -44,7 +44,11 @@ function SignUpPage(){
       <div className="text-center mb-8">
         <div className="flex flex-col items-center gap-3 group">
           <div className="size-14 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-all duration-300 shadow-sm">
-            <MessageSquare className="size-7 text-primary" />
+          <img 
+                src="/whispr-logo.svg" 
+                alt="Whispr Logo" 
+                className="w-25 h-25 text-indigo-400"
+              />
           </div>
           <h1 className="text-3xl font-bold mt-2 text-primary-content">Create Account</h1>
           <p className="text-base-content/70 max-w-xs">Join Whispr today and connect with your community</p>
@@ -204,7 +208,11 @@ function SignUpPage(){
     
     <div className="relative z-10 max-w-md text-center space-y-6">
       <div className="size-20 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6">
-        <MessageSquare className="size-10" />
+      <img 
+                src="/whispr-logo.svg" 
+                alt="Whispr Logo" 
+                className="w-20 h-20 text-indigo-400"
+              />
       </div>
       <h2 className="text-4xl font-bold">Welcome to Whispr</h2>
       <p className="text-xl opacity-90">Connect with friends, share moments, and stay in touch with your loved ones.</p>

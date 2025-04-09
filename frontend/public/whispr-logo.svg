@@ -1,0 +1,139 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#ffffff" fill-opacity="0" />
+  
+  <!-- Enhanced gradients -->
+  <defs>
+    <linearGradient id="bubbleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c7d2fe" />
+      <stop offset="50%" stop-color="#a5b4fc" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+    
+    <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ddd6fe" />
+      <stop offset="50%" stop-color="#c4b5fd" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+    
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e0e7ff" />
+      <stop offset="100%" stop-color="#a5b4fc" />
+    </linearGradient>
+    
+    <!-- Glow effect -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <!-- Soft shadow -->
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#4338ca" flood-opacity="0.15" />
+    </filter>
+  </defs>
+  
+  <!-- Background subtle pattern -->
+  <circle cx="400" cy="300" r="250" fill="url(#accentGradient)" opacity="0.05" />
+  
+  <!-- Main speech bubble with enhanced shape and effects -->
+  <path d="M400 150 
+           C230 150 180 230 180 310 
+           C180 410 280 450 400 450 
+           C520 450 620 410 620 310 
+           C620 230 570 150 400 150 Z" 
+        fill="url(#bubbleGradient)" 
+        stroke="#6366f1" 
+        stroke-width="2.5" 
+        filter="url(#softShadow)" />
+  
+  <!-- Enhanced tail for the speech bubble -->
+  <path d="M260 430 
+           C260 430 220 490 190 520 
+           C195 510 210 500 230 480 
+           C250 460 280 440 280 430 Z" 
+        fill="url(#bubbleGradient)" 
+        stroke="#6366f1" 
+        stroke-width="2.5" />
+  
+  <!-- Inner glow accent in the bubble -->
+  <ellipse cx="480" cy="250" rx="60" ry="40" fill="#e0e7ff" opacity="0.3" />
+  
+  <!-- Multiple layered sound waves with varying opacity -->
+  <!-- First layer of sound waves -->
+  <path d="M330 300 
+           C345 270 345 330 360 300 
+           C375 270 375 330 390 300 
+           C405 270 405 330 420 300 
+           C435 270 435 330 450 300" 
+        stroke="url(#waveGradient)" 
+        stroke-width="8" 
+        stroke-linecap="round" 
+        fill="none" 
+        opacity="0.9" />
+  
+  <!-- Second layer of sound waves -->
+  <path d="M340 300 
+           C355 275 355 325 370 300 
+           C385 275 385 325 400 300 
+           C415 275 415 325 430 300 
+           C445 275 445 325 460 300" 
+        stroke="#a5b4fc" 
+        stroke-width="4" 
+        stroke-linecap="round" 
+        fill="none" 
+        opacity="0.7" />
+  
+  <!-- Third layer of sound waves -->
+  <path d="M350 300 
+           C365 280 365 320 380 300 
+           C395 280 395 320 410 300 
+           C425 280 425 320 440 300" 
+        stroke="#c7d2fe" 
+        stroke-width="3" 
+        stroke-linecap="round" 
+        fill="none" 
+        opacity="0.5" />
+  
+  <!-- Stylized "W" with enhanced design -->
+  <path d="M320 340 
+           L345 370 
+           L370 340 
+           L395 370 
+           L420 340" 
+        stroke="#4f46e5" 
+        stroke-width="10" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"
+        fill="none" 
+        filter="url(#glow)" />
+  
+  <!-- Brand name with enhanced typography -->
+  <g filter="url(#softShadow)">
+    <text x="400" y="520" 
+          font-family="Arial, sans-serif" 
+          font-size="54" 
+          font-weight="bold" 
+          text-anchor="middle" 
+          fill="#4f46e5">
+      whispr
+    </text>
+  </g>
+  
+  <!-- Refined tagline -->
+  <text x="400" y="555" 
+        font-family="Arial, sans-serif" 
+        font-size="22" 
+        text-anchor="middle" 
+        fill="#818cf8" 
+        font-style="italic"
+        letter-spacing="2">
+    intimate conversations
+  </text>
+  
+  <!-- Subtle decorative elements -->
+  <circle cx="220" cy="240" r="6" fill="#e0e7ff" opacity="0.6" />
+  <circle cx="580" cy="380" r="8" fill="#e0e7ff" opacity="0.6" />
+  <circle cx="250" cy="360" r="5" fill="#e0e7ff" opacity="0.4" />
+  <circle cx="540" cy="270" r="7" fill="#e0e7ff" opacity="0.4" />
+</svg>
