@@ -30,6 +30,37 @@
 
 ### 1. Clone the Repository
 
-  ```bash
-      git clone https://github.com/Avinashrkrk/Whispr.git
-      cd Whispr
+      ```bash
+          git clone https://github.com/Avinashrkrk/Whispr.git
+          cd Whispr
+### 2.  Install Dependencies
+      ```bash
+        npm run build
+### 3. Run the App
+      ```bash
+      npm run start
+### 4. Start the Frontend
+    ```bash
+    cd ../frontend 
+    npm run dev
+
+Visit http://localhost:5000 in your browser to use the app locally.
+
+### 📂 Project Structure
+    ```bash
+    Whispr/
+    ├── frontend /          # React frontend
+    │   └── ...          
+    ├── backend/          # Node.js + Express backend with Socket.IO
+    │   └── ...
+    └── README.md
+### 📌 Future Plans
+* 🧠 Add speech-to-text using Whisper AI
+
+* 📹 Integrate video calling with WebRTC
+
+* 🔒 Improve user authentication
+
+* 🌐 Add support for multiple chat rooms or channels
+
+      
