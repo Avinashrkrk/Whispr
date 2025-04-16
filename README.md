@@ -1,7 +1,6 @@
 # Whispr
 
 **Whispr** is a minimal and clean real-time chat application that allows users to send and receive messages instantly. Built with modern web technologies, Whispr focuses on simplicity and a smooth user experience.
-jfhgfhf
 
 🚀 **Live Demo:** [https://whispr-kh7r.onrender.com](https://whispr-kh7r.onrender.com)
 
